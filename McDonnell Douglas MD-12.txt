@@ -1,0 +1,76 @@
+McDonnell Douglas MD-12
+
+Type: High-capacity long-range airliner.
+
+Program: Definitive four-engined layout announced April 1992; development delayed following failure to conclude arrangement with Taiwan Aerospace and prolonged down-turn profitability in airline industry; new risk sharing partners or partner group being sought; low level of development activity in 1994.
+
+Current versions: Initially offered in Long-Range, High-Capacity, Freight, and Combi versions; later to be offered in Stretch Medium Range, Stretch Long Range, and Twin Engined versions.
+
+Customers: No firm customers announced by mid-1995.
+
+Design features: Full-length two-deck fuselage seating up to 579 passengers in three classes; range would allow New York to Tapei, Singapore to Zurich, or Los Angeles to Bangkok non-stop. Wing of advanced technology with 35 degree sweep; wing span maintains operational clearance with current taxiway separation standards; seat-mile costs to be 15 percent less than those of current largest airliner.
+
+Flying controls: Fly-by-wire control system with all-glass cockpit; normal ailerons assisted by outboard spoiler panels; four elevator sections; rudders divided into fore and aft and upper and lower panels; total seven spoilers per wing for lateral control. airbrakes and lift dumping; six leading-edge slat and three flap sections per wing.
+
+Landing gear: Five main legs to carry one four-wheel bogie; inner legs retract into fuselage, outers into wing and fuselage; twin wheel nose leg.
+
+Power plant: Four turbofans; choice of GE CF6-80C2D1F (273.6 kN; 61,500 lb st each) or Pratt & Whitney PW4462 (275.9 kN; 62,000 lb st each) or Rolls Royce Trent 764 (284.7 kN; 64,000 lb st each).
+
+Accommodation: Two-pilot flight deck on main deck level; possible cross-qualifying with MD-11; crew rest compartment at front end of main upper decks; cabin crew rest area at aft end of upper deck; main deck has two or three aisles; upper deck has two aisles; Long-Range interior seats 481 passengers in three-class layout, including 176 economy class on shortened upper deck plus 24 first class, 90 business class, and 191 economy class on main deck; High Capacity version seats as many as 579 passengers with  107 business class and 93 economy class on full-length upper deck plus 30 first class and 349 economy class on main deck; Combi carriers maximum of nine freight pallets on main deck and 428 passengers; Freight accommodates cargo on both main and upper decks; underfloor freight compartments hold two LD3 containers abreast; eight passenger doors on main deck and four escape doors on upper deck; one stairway standard and second available for High Capacity.
+
+Dimensions external
+Wing span: 69.80 m (229 ft 0 in)
+Wing aspect ratio: 7.76
+Length fuselage: 61.32 m (201 ft 2 in)
+Length overall: 63.93 m (209 ft 6 in)
+Height overall: 23.32 m (76 ft 6 in)
+Tailplane span: 25.2 m (82 ft 5 in)
+Wheel track: 11.48 m (37 ft 8 in)
+Wheelbase: 26.82 m (88 ft 0 in)
+
+Dimensions internal
+Main deck width at floor: 6.71 m (22 ft 0 in)
+Upper deck width at shoulder: 5.33 m (17 ft 6 in)
+Underfloor freight volume: 139.3 cu m (4,920 cu ft)
+Main deck freight volume: 538.9 cu m (19,030 cu ft)
+Upper deck freight volume: 198.2 cu m (7,000 cu ft)
+
+Areas
+Wings, gross: 628.1 sq m (6,761.0 sq ft)
+Vertical tail surfaces (total): 108.7 sq m (1,170.0 sq ft)
+Horizontal tail surfaces: 140.3 sq m (1,510.0 sq ft)
+
+Weights and loadings
+Operating weight empty Long Range: 200,490 kg (442,000 lb)
+Operating weight empty High Capacity: 208,655 kg (460,000 lb)
+Operating weight empty Combi: 209,105 kg (461,000 lb)
+Operating weight empty Freighter: 191,870 kg (423,000 lb)
+Weight limited payload, Freighter only: 143,790 kg (317,000 lb)
+Max T-O weight Long Range, High Capacity. Combi, Freighter: 463,570 kg (1,022,000 lb)
+Max zero-fuel weight Long Range, High Capacity: 290,300 kg (640,000 lb)
+Max zero-fuel weight Combi: 297,100 kg (655,000 lb)
+Max zero-fuel weight Freighter: 328,855 kg (725,000 lb)
+Max landing weight Long Range, High Capacity: 308,445 kg (680,000 lb)
+Max landing weight Combi: 315,245 kg (695,000 lb)
+Max landing weight Freighter: 347,000 kg (765,000 lb)
+Max wing loading: 738 kg/sq m (151.2 lb/sq ft)
+
+Performance (estimated)
+Cruising Mach number: 0.85
+FAA T-O field length (ISA + 30 degrees Celsius): 3,170 m (10,400 ft)
+
+FAA landing field length(S/L)
+Long Range, High Capacity: 2,683 m (8,800 ft)
+Combi: 2,744 m (9,000 ft)
+Freighter: 2,926 m (9,600 ft)
+
+Design range (FAA international reserves and full passenger payload: freight payload on Combi and Freighter at 136 kg/cu m; 8.5 lb/cu ft)
+Long Range: 8,090 n miles (14,982 km; 9,309 miles)
+High Capacity: 7,130 n miles (13,204 km; 8,205 miles)
+Combi: 6,360 n miles (11,778 km; 7,319 miles)
+Freighter: 5,000 n miles (9,260 km; 5,753 miles)
+
+Source: Jackson, Paul ed. Jane's All the World's Aircraft 1995-96 Jane's Information Group Ltd 1995 pp. 607-608.
+
+Artist's impression of McDonnell Douglas MD-12 with full-length upper deck circa 1992.
+Source: Unknown

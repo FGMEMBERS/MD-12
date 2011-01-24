@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!--
+  File:     CF6-80C2.xml
+  Author:   Aero-Matic v 0.81
+
+  Inputs:
+    name:           CF6-80C2
+    type:           turbine
+    thrust:         61595.2 lb
+    augmented?      no
+    injected?       no
+    
+    REFERENCE : http://webcache.googleusercontent.com/search?q=cache:erCFimrf57gJ:www.alair.com/Commercial/cf6-80C2.html+General+Electric+CF6-80C2+sfc&cd=11&hl=pt-BR&ct=clnk&gl=br&client=firefox-a
+    
+    Thrust: 40,000 - 72,000 lbs
+	Aircraft 
+		A300, A310, A330,
+		B767, B747, MD-11,
+		DC-10, E-4, KC-10,
+		767 AWACS & Air Force One
+	General Electric CF6-80C2
+	A300, A310, 747, 767 and MD-11 Engines
+
+	Thrust 			52,500 - 61,500	SLS
+					11,330	Max Cruise 
+	SFC				0.329	Takeoff		
+	BPR				5.05
+	OPR				30.4
+	Mass Flow		1,769	Takeoff
+	Engine Length		160.9	Inches
+	Fan Diameter		93.0	Inches
+	Weight			9,135	lbs
+	Fan				1 	Stages
+	Booster			4	Stages
+	HPC				14	Stages
+	HPT				2	Stages
+	LPT				5.5	Stages
+	
+-->
+
+<turbine_engine name="CF6-80C2">
+  <milthrust> 61595.2 </milthrust>
+  <bypassratio>     5.05 </bypassratio>
+  <tsfc>            0.329 </tsfc>
+  <bleed>           0.03</bleed>
+  <idlen1>         30.0 </idlen1>
+  <idlen2>         60.0 </idlen2>
+  <maxn1>         100.0 </maxn1>
+  <maxn2>         100.0 </maxn2>
+  <augmented>         0 </augmented>
+  <injected>          0 </injected>
+
+  <function name="IdleThrust">
+   <table>
+    <independentVar lookup="row">velocities/mach</independentVar>
+    <independentVar lookup="column">atmosphere/density-altitude</independentVar>
+    <tableData>
+         -10000     0     10000   20000   30000   40000   50000
+     0.0  0.0430  0.0488  0.0528  0.0694  0.0899  0.1183  0.1467
+     0.2  0.0500  0.0501  0.0335  0.0544  0.0797  0.1049  0.1342
+     0.4  0.0040  0.0047  0.0020  0.0272  0.0595  0.0891  0.1203
+     0.6  0.0     0.0     0.0     0.0     0.0276  0.0718  0.1073
+     0.8  0.0     0.0     0.0     0.0     0.0474  0.0868  0.0900
+     1.0  0.0     0.0     0.0     0.0     0.0     0.0552  0.0800
+    </tableData>
+   </table>
+  </function>
+
+  <function name="MilThrust">
+   <table>
+    <independentVar lookup="row">velocities/mach</independentVar>
+    <independentVar lookup="column">atmosphere/density-altitude</independentVar>
+    <tableData>
+          -10000       0   10000   20000   30000   40000   50000
+     0.0   1.2600  1.0000  0.7400  0.5340  0.3720  0.2410  0.1490
+     0.2   1.1710  0.9340  0.6970  0.5060  0.3550  0.2310  0.1430
+     0.4   1.1500  0.9210  0.6920  0.5060  0.3570  0.2330  0.1450
+     0.6   1.1810  0.9510  0.7210  0.5320  0.3780  0.2480  0.1540
+     0.8   1.2580  1.0200  0.7820  0.5820  0.4170  0.2750  0.1700
+     1.0   1.3690  1.1200  0.8710  0.6510  0.4750  0.3150  0.1950
+     1.2   1.4850  1.2300  0.9750  0.7440  0.5450  0.3640  0.2250
+     1.4   1.5941  1.3400  1.0860  0.8450  0.6280  0.4240  0.2630
+    </tableData>
+   </table>
+  </function>
+
+</turbine_engine>

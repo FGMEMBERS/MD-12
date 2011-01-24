@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Prestes Hangar Aircraft Model
+
+	Visit PRESTES Hangar website at http://presteshangar.wikidot.com/start
+	
+	Revisions
+		SET-2009, inicio do desenvolvimento do modelo.
+		15-JAN-2010, primeira versao apresentada.
+		01-JAN-2011, segunda versao apresnetada
+	License : Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported license. 
+			
+ -->
+
+<PropertyList>
+ <sim>
+
+		<description>McDonnell-Douglas MD-12</description>
+		<author>Isaias Prestes</author>
+		
+		<!-- Estado de desenvolvimento da aeronave -->
+		<status>alpha</status>
+<!--		<status>beta</status>		-->
+<!--		<status>development</status>		-->
+
+		<flight-model>jsb</flight-model>
+<!--		<flight-model>yasim</flight-model>		-->
+
+		<!-- O nome basico do aviao fornecido ao FDM, 
+			geralmente o nome da pasta do aviao -->
+		<aero>MD-12</aero>
+
+		<virtual-cockpit archive="y">false</virtual-cockpit>
+
+		<!-- Definicoes dos sistemas -->
+		<systems>
+			<autopilot>
+				<path>Aircraft/MD-12/Systems/autopilot.xml</path>
+			</autopilot>
+			<electrical>
+				<path>Aircraft/MD-12/Systems/electrical.xml</path>
+			</electrical>
+			<system>
+				<path>Aircraft/MD-12/Systems/systems.xml</path>
+			</system>
+		</systems>
+		
+		<!-- Definicoes para a instrumentacao da aeronave -->
+		<instrumentation>
+			<path>Aircraft/MD-12/Systems/instrumentation.xml</path>
+		</instrumentation>
+
+		<!-- Definicoes para som da aeronave -->
+		<sound>
+			<audible>true</audible>
+			<path>Aircraft/MD-12/Sounds/MD-12_sounds.xml</path>
+		</sound>
+
+		<!-- Definicoes para splash screen -->
+		<startup>
+			<splash-texture>Aircraft/MD-12/splash.png</splash-texture>
+		</startup>
+
+		<!-- Definicoes do Painel 2D da Aeronave -->
+		
+		<panel>
+			<path>Aircraft/737-300/Panels/737-ifr-panel.xml</path>
+			<visibility>false</visibility>
+		</panel>
+		
+		<!-- modificoes para funcionamento dos liveries - http://wiki.flightgear.org/index.php/Livery_over_MP -->
+		<model>
+			<path>Aircraft/MD-12/Models/MD-12.xml</path>
+			<livery>
+				<file type="string"/>
+			</livery>
+			<miscelania>
+				<file type="string"/>
+			</miscelania>		
+			<!--
+			<immat>MD-12</immat>
+			-->
+			 <pushback>
+			  <kp type="double">10</kp>
+			  <ki type="double">25</ki>
+			  <kd type="double">0</kd>
+			  <position-norm type="double">1</position-norm>
+			 </pushback>
+		</model>
+		
+		<!-- Cameras da aeronave -->
+		<view>
+			<internal archive="y">true</internal>
+			<config>
+				<!-- x/y/z == (esquerda, direita)/(cima, baixo)/(frente, tras) -->
+				<x-offset-m archive="y">-0.555276</x-offset-m>
+				<y-offset-m archive="y">6.73476</y-offset-m>
+				<z-offset-m archive="y">-27.1682</z-offset-m>
+				<pitch-offset-deg archive="y">-10.7</pitch-offset-deg>
+			</config>
+		</view>
+		<view n="1">
+			<name>Rear view</name>
+		    <internal archive="y">false</internal>
+			<config>
+				<!-- big plane, so extend chase view offset a bit -->
+				<z-offset-m type="double" archive="y">-100.0</z-offset-m>
+				<pitch-offset-deg archive="y">2.5</pitch-offset-deg>
+			</config>
+		</view>
+		<view n="2">
+			<name>Good runway angle</name>
+		    <internal archive="y">false</internal>
+			<config>
+				<z-offset-m type="double" archive="y">-85.0</z-offset-m>
+				<pitch-offset-deg archive="y"> 12.0</pitch-offset-deg>
+			</config>
+		</view>
+		<view n="3">
+			<internal archive="y">false</internal>
+		</view>
+		<view n="4">
+			<internal archive="y">false</internal>
+		</view>
+		<view n="5">
+			<internal archive="y">false</internal>
+		</view>
+		<view n="6">
+			<internal archive="y">false</internal>
+		</view>
+		<view n="5100">
+		    <name>Asa esquerda</name>
+		    <type>lookfrom</type>
+			<internal archive="y">true</internal>
+		    <config>
+		      <from-model type="bool">true</from-model>
+		      <from-model-idx type="int">0</from-model-idx>
+		      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+		      <default-field-of-view-deg type="double">55</default-field-of-view-deg>
+		      <pitch-offset-deg>-5.525</pitch-offset-deg>
+		      <heading-offset-deg type="double">90.5</heading-offset-deg> <!-- parallel to the panel -->
+		      <x-offset-m archive="y"> -4.25 </x-offset-m> <!--Left/Right -->
+		      <y-offset-m archive="y"> 6.3 </y-offset-m> <!--Up/Down -->
+		      <z-offset-m archive="y"> 7.00 </z-offset-m> <!--Fdw/Back -->
+		    </config>
+	    </view>
+		<view n="5500">
+		    <name>Turbina Direita</name>
+		    <type>lookfrom</type>
+			<internal archive="y">true</internal>
+		    <config>
+			      <from-model type="bool">true</from-model>
+			      <from-model-idx type="int">0</from-model-idx>
+			      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+			      <default-field-of-view-deg type="double">45</default-field-of-view-deg>
+			      <pitch-offset-deg>-13.625</pitch-offset-deg>
+			      <heading-offset-deg type="double">223.3124</heading-offset-deg> <!-- parallel to the panel -->
+			      <x-offset-m archive="y"> 4.55 </x-offset-m> <!--Left/Right -->
+			      <y-offset-m archive="y"> 6.3 </y-offset-m> <!--Up/Down -->
+			      <z-offset-m archive="y"> -14.00 </z-offset-m> <!--Fdw/Back -->
+		    </config>
+	    </view>
+		<view n="5502">
+			<name>Copilot</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">55</default-field-of-view-deg>
+				<heading-offset-deg type="double">8.4375</heading-offset-deg>
+				<!-- x/y/z == (esquerda, direita)/(cima, baixo)/(frente, tras) -->
+				<x-offset-m archive="y"> 0.555276</x-offset-m>
+				<y-offset-m archive="y">6.73476</y-offset-m>
+				<z-offset-m archive="y">-27.1682</z-offset-m>
+				<pitch-offset-deg archive="y">-14.725</pitch-offset-deg>
+			</config>
+		</view>
+		
+		<!-- Distancia padrao da vista para o aviao (metros) -->
+		<chase-distance-m>-95</chase-distance-m>
+		
+		<!-- Ajuste dos flaps -->
+		<flaps>
+			<setting>0.000</setting>
+			<!-- flaps up -->
+			<setting>0.125</setting>
+			<!-- flaps 1  -->
+			<setting>0.250</setting>
+			<!-- flaps 2  -->
+			<setting>0.375</setting>
+			<!-- flaps 5  -->
+			<setting>0.500</setting>
+			<!-- flaps 10 -->
+			<setting>0.625</setting>
+			<!-- flaps 15 -->
+			<setting>0.750</setting>
+			<!-- flaps 25 -->
+			<setting>0.875</setting>
+			<!-- flaps 30 -->
+			<setting>1.000</setting>
+			<!-- flaps 40 -->
+		</flaps>
+		
+	    <multiplay>
+	      <chat_display>1</chat_display>
+	      <generic> 
+	        <int type="int">0</int>  <!-- 0 immat -->
+	        <int type="int">0</int>  <!-- 1 immat -->
+	        <int type="int">0</int>  <!-- 2 immat -->
+	        <int type="int">0</int>  <!-- 3 immat -->
+	        <int type="int">0</int>  <!-- 4 immat -->
+	        <int type="int">0</int>  <!-- 5 immat -->
+	        <int type="bool">0</int> <!-- 6 smoke --> <!-- controls engines Smoke -->
+	        <int type="int">0</int>  <!-- 7 color --> <!-- controls engines Smoke -->
+	      </generic>
+	    </multiplay> 
+
+		<!-- Controledosefeitosexibidos -->
+		<effects>
+			<shaders>
+				<window type="bool">0</window>
+			</shaders>
+			<contrails type="bool">0</contrails>			
+			<engines>
+				<smoke type="bool">true</smoke>
+			</engines>
+			<gear>
+				<tiresmoke type="bool">0</tiresmoke>
+				<spray type="bool">0</spray>
+			</gear>
+		</effects>
+
+		  <submodels> 
+		    <serviceable type="bool">true</serviceable>
+		    <path>Aircraft/MD-12/submodels.xml</path>
+		  </submodels>	     
+
+		<!-- O menu de ajuda da aeronave -->
+		<help>
+			<title>MD-12</title>
+			<line>Choose your favorit texture using the key above</line>
+			<line>To start the plane you have to select "Engine Starter" and then when</line>
+			<line>n2 shows 25 you have to select "Engine Start", If you want to cutoff</line>
+			<line>the engine just select "Engine Start"</line>
+			<key>
+				<name>l</name>
+				<desc>Brings up the Livery Switching Dialog</desc>
+			</key>
+			<key>
+				<name>Del</name>
+				<desc>Toggle Reversers</desc>
+			</key>
+			<key>
+				<name>Ctrl+B</name>
+				<desc>Toggle SpeedBrake</desc>
+			</key>
+		   <key>
+			    <name>b </name>
+			    <desc>Brakes</desc>
+		   </key>
+		   <key>
+			    <name>Shift+b </name>
+			    <desc>Parking brakes</desc>
+		   </key>
+			<key>
+				<name>w</name>
+				<desc>Engage nose wheel steering</desc>
+			</key>
+		</help>
+
+
+
+		<!-- Entradas para o menu de apoio para controle da aeronave -->
+		<menubar>
+			<default>
+				<menu n="100">
+					<label>MD-12</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Select Livery</label>
+						<binding>
+							<command>nasal</command>
+							<script>aircraft.livery.dialog.open()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Immatriculation</label>
+						<binding>
+						<command>nasal</command>
+						<script>md12immat.immat_dialog.toggle()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Lights</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							  var dlg = gui.Dialog.new("/sim/gui/dialogs/lights-config/dialog", "Aircraft/MD-12/Dialogs/lights-dialog.xml");
+				       </script>
+						</binding>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>lightcontrol</dialog-name>
+						</binding>
+					</item>
+					<item>
+						<label>Engines</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							  var dlg = gui.Dialog.new("/sim/gui/dialogs/engines-config/dialog", "Aircraft/MD-12/Dialogs/engines-dialog.xml");
+				       </script>
+						</binding>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>enginecontrol</dialog-name>
+						</binding>
+					</item>
+					<item>
+						<label>Message system</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							  var dlg = gui.Dialog.new("/sim/gui/dialogs/message-config/dialog", "Aircraft/MD-12/Dialogs/message-dialog.xml");
+				       </script>
+						</binding>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>messagecontrol</dialog-name>
+						</binding>
+					</item>
+					<item>
+						<label>Effects</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							  var dlg = gui.Dialog.new("/sim/gui/dialogs/effects-config/dialog", "Aircraft/MD-12/Dialogs/effects-dialog.xml");
+				       </script>
+						</binding>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>effectscontrol</dialog-name>
+						</binding>
+					</item>
+					<item>
+						<label>Pushback</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							  var dlg = gui.Dialog.new("/sim/gui/dialogs/pushback-config/dialog", "Aircraft/MD-12/Dialogs/pushback.xml");
+				       </script>
+						</binding>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>pushback</dialog-name>
+						</binding>
+					</item>
+					
+					<item>
+						<label>Ground Service</label>
+						<binding>
+							<command>nasal</command>
+							<script>groundservice.serviceonoff()</script>
+						</binding>
+					</item>
+					
+					<!--Ground proximity warning system (GPWS)-->
+					<item>
+						<label>Ground proximity warning system (GPWS)</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>instrumentation/mk-viii/servicable</property>
+						</binding>
+					</item>
+					
+					<!-- Dialogo do Pushback -->
+				   <item>
+					    <label>Pushback</label>
+					    <name>pushback</name>
+					    <binding>
+						     <command>dialog-show</command>
+						     <dialog-name>pushback</dialog-name>
+					    </binding>
+				   </item>
+				</menu>
+			</default>
+		</menubar>
+
+	<crashed type="bool">false</crashed>
+	
+ </sim>		<!-- FIM DA SECAO SIM -->
+
+	<!-- Engines using thrust reversal. http://wiki.flightgear.org/index.php/Howto:_Add_thrust_reversal -->
+	<!-- Prestes Hangar code - SET-2009 -->
+	
+	<!-- Definicoes para o estado dos motores e seus reversores de empuxo -->
+	<engines>
+		<engine n="0">
+			<running>true</running>
+			<reverser-position type="double">0.000000</reverser-position>
+		</engine>
+		<engine n="1">
+			<running>true</running>
+			<reverser-position type="double">0.000000</reverser-position>
+		</engine>
+		<engine n="2">
+			<running>true</running>
+			<reverser-position type="double">0.000000</reverser-position>
+		</engine>
+		<engine n="3">
+			<running>true</running>
+			<reverser-position type="double">0.000000</reverser-position>
+		</engine>
+	</engines>
+
+	<!-- Engines using thrust reversal keyboard. http://wiki.flightgear.org/index.php/Howto:_Add_thrust_reversal -->
+	<input>
+		<keyboard>
+			<key n="127">
+				<name>Delete</name>
+				<desc>Toggle Reversers</desc>
+				<binding>
+					<command>nasal</command>
+					<script>reversethrust.togglereverser()</script>
+				</binding>
+			</key>
+			
+			<!-- Thanks to David Culp -->
+			<key n="109">
+				<name>m</name>
+				<desc>engage nose wheel steering</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>fdm/jsbsim/systems/NWS/engaged</property>
+					<value>1</value>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>property-assign</command>
+						<property>fdm/jsbsim/systems/NWS/engaged</property>
+						<value>0</value>
+					</binding>
+				</mod-up>
+			</key>			
+		</keyboard>
+	</input>
+			
+			
+	<!-- Ajuste dos controles -->
+	<controls>
+		<groundservice>
+			<active type="bool">false</active>
+		</groundservice>
+		<gear>
+			<brake-parking>1.0</brake-parking>
+			<gear-down>true</gear-down>
+		</gear>
+		<lighting>
+			<instruments-norm>0.0</instruments-norm>
+			<landing-lights type="bool">0</landing-lights>
+			<beacon type="bool">0</beacon>
+			<strobe type="bool">0</strobe>
+			<nav-lights type="bool">0</nav-lights>
+			<cabin-lights type="bool">0</cabin-lights>
+			<wing-lights type="bool">0</wing-lights>
+			<taxi-light type="bool">0</taxi-light>
+			<instrument-lights type="bool">0</instrument-lights>
+		</lighting>
+		<cabin>
+			<fan type="bool">0</fan>
+			<heat type="bool">0</heat>
+		</cabin>
+		<messages>
+			<embarque type="bool">0</embarque>
+			<eqpeletr type="bool">0</eqpeletr>
+			<duremb type="bool">0</duremb>
+			<decauth type="bool">0</decauth>
+			<servicobordo type="bool">0</servicobordo>
+			<cmteprobl type="bool">0</cmteprobl>
+			<cmtepousauth type="bool">0</cmtepousauth>
+			<cmteaguardar type="bool">0</cmteaguardar>
+			<taxiando type="bool">0</taxiando>
+			<fastenseatbelt type="bool">0</fastenseatbelt>
+			<turb type="bool">0</turb>
+			<inicialcmte type="bool">0</inicialcmte>
+			<instrsegur type="bool">0</instrsegur>
+		</messages>
+	</controls>
+
+	<!-- Codigos NASAL -->
+	<nasal>
+	    <livery>
+	        <file>Aircraft/MD-12/Nasal/livery.nas</file>
+	    </livery>
+		<tyresmoke>
+			<file>Aircraft/MD-12/Nasal/tyresmoke.nas</file>
+		</tyresmoke>
+		<reversethrust>
+			<file>Aircraft/MD-12/Nasal/reverse-thrust.nas</file>
+		</reversethrust>
+		<general>
+			<file>Aircraft/MD-12/Nasal/general.nas</file>
+		</general>
+		<lights>
+			<file>Aircraft/MD-12/Nasal/lights.nas</file>
+		</lights>
+		<groundservice>
+			<file>Aircraft/MD-12/Nasal/groundservice.nas</file>
+		</groundservice>
+		<messagesys>
+			<file>Aircraft/MD-12/Nasal/messagesys.nas</file>
+		</messagesys>
+		<effects>
+			<file>Aircraft/MD-12/Nasal/effects.nas</file>
+		</effects>	
+		<md12immat>
+			<file>Aircraft/MD-12/Nasal/immat.nas</file>
+		</md12immat>	
+	</nasal>
+
+	<!-- Ajustes da Instrumentacao -->
+	<instrumentation>
+		<efis>
+			<mfd>
+				<display-mode>APP</display-mode>
+			</mfd>
+		</efis>
+		
+	   <mk-viii>                           <!-- http://wiki.flightgear.org/index.php/GPWS -->
+		 <serviceable>true</serviceable>   <!-- EGPWS_ENABLE -->
+		 <configuration-module>
+		   <category-1> 254 </category-1>  <!-- AIRCRAFT_MODE_TYPE_SELECT -->
+		   <category-3>   2 </category-3>  <!-- POSITION_INPUT_SELECT -->
+		   <category-4>  13 </category-4>  <!-- ALTITUDE_CALLOUTS -->
+		   <category-5>   0 </category-5>  <!-- AUDIO_MENU_SELECT -->
+		   <category-6>   1 </category-6>  <!-- TERRAIN_DISPLAY_SELECT -->
+		   <category-7> 124 </category-7>  <!-- OPTIONS_SELECT_GROUP_1 -->
+		   <category-8>   4 </category-8>  <!-- RADIO_ALTITUDE_INPUT_SELECT -->
+		   <category-9>   3 </category-9>  <!-- NAVIGATION_INPUT_SELECT -->
+		   <category-10>  6 </category-10> <!-- ATTITUDE_INPUT_SELECT -->
+		   <category-13>  7 </category-13> <!-- INPUT_OUTPUT_DISCRETE_TYPE_SELECT -->
+		   <category-14>  0 </category-14> <!-- AUDIO_OUTPUT_LEVEL -->
+		 </configuration-module>
+		 <inputs>                          <!-- Module I/O -->
+		   <arinc429>
+			 <decision-height-ncd> false </decision-height-ncd>
+			 <decision-height> 200 </decision-height>
+		   </arinc429>
+		 </inputs>
+		 <speaker>                         <!-- Speaker Configuration -->
+		   <max-dist> 2 </max-dist>        <!-- Max. distance where speaker is heard -->
+		   <reference-dist> 1 </reference-dist> <!-- Distance to pilot -->
+		   <volume> 0.4 </volume>          <!-- Volume at reference distance -->
+		 </speaker>
+		 <voice>
+			 <file-prefix type="string">Sounds/mk-viii/</file-prefix>
+											 <!-- sound file path and prefix -->
+		 </voice>
+	   </mk-viii>
+
+		<wxradar>
+			<serviceable>true</serviceable>
+			<range type="int" archive="y">20</range>
+			<minimized type="bool" archive="y">false</minimized>
+			<switch archive="y">on</switch>
+			<mode archive="y">wx</mode>
+			<lightning type="bool" archive="y">true</lightning>
+			<display-mode archive="y">arc</display-mode>
+		</wxradar>
+		<radar>
+			<range type="int" archive="y">20</range>
+			<switch>on</switch>
+		</radar>
+		<nav>
+			<radials>
+				<selected-deg type="double">000</selected-deg>
+			</radials>
+		</nav>
+		<transponder>
+			<id-code>1200</id-code>
+			<ta-ra>0</ta-ra>
+		</transponder>
+		
+  <radar-altimeter>
+	<serviceable>true</serviceable>
+	<status>on</status>
+	<antenna>
+		<x-offset-m>0</x-offset-m>
+		<y-offset-m>0</y-offset-m>
+		<z-offset-m>3.5</z-offset-m>
+	</antenna>
+	
+  </radar-altimeter>
+		
+	</instrumentation>
+	
+	<consumables>
+	 <fuel>
+	  <tank n="0"><name>Ext Left Wing</name></tank>
+	  <tank n="1"><name>Int Left Wing</name></tank>
+	  <tank n="2"><name>Center</name></tank>
+	  <tank n="3"><name>Int Right Wing</name></tank>
+	  <tank n="4"><name>Ext Right Wing</name></tank>
+	  <tank n="5"><name>VStab Left</name></tank>
+	  <tank n="6"><name>Tail</name></tank>
+	  <tank n="7"><name>VStab Right</name></tank>
+	 </fuel>
+	</consumables>
+	
+	<systems>
+		<autoflight>
+			<serviceable type="bool">true</serviceable>
+		</autoflight>
+	</systems>
+	
+<payload>
+	<weight>
+		<name type="string">Pilot/Crew</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+		<min-lb type="double">0.0</min-lb>
+		<max-lb type="double">36637.5</max-lb>
+	</weight>
+
+	<weight>
+		<name type="string">Belly Pallet 11</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+		<min-lb type="double">0.0</min-lb>
+		<max-lb type="double">36637.5</max-lb>
+	</weight>
+	<weight>
+		<name type="string">Belly Pallet 12</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
+		<min-lb type="double">0.0</min-lb>
+		<max-lb type="double">36637.5</max-lb>
+	</weight>
+	<weight>
+		<name type="string">Belly Pallet 13</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]"/>
+		<min-lb type="double">0.0</min-lb>
+		<max-lb type="double">36637.5</max-lb>
+	</weight>
+	<weight>
+		<name type="string">Belly Pallet 14</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]"/>
+		<min-lb type="double">0.0</min-lb>
+		<max-lb type="double">36637.5</max-lb>
+	</weight>
+	<weight>
+		<name type="string">Belly Pallet 15</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]"/>
+		<min-lb type="double">0.0</min-lb>
+		<max-lb type="double">36637.5</max-lb>
+	</weight>	<weight>
+		<name type="string">Belly Pallet 16</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[6]"/>
+		<min-lb type="double">0.0</min-lb>
+		<max-lb type="double">36637.5</max-lb>
+	</weight>
+
+	<weight>
+		<name type="string">Belly Pallet 21</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[7]"/>
+		<min-lb type="double">0.0</min-lb>
+		<max-lb type="double">36637.5</max-lb>
+	</weight>	<weight>
+		<name type="string">Belly Pallet 22</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[8]"/>
+		<min-lb type="double">0.0</min-lb>
+		<max-lb type="double">36637.5</max-lb>
+	</weight>	<weight>
+		<name type="string">Belly Pallet 23</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[9]"/>
+		<min-lb type="double">0.0</min-lb>
+		<max-lb type="double">36637.5</max-lb>
+	</weight>	<weight>
+	
+		<name type="string">Belly Pallet 31</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[10]"/>
+		<min-lb type="double">0.0</min-lb>
+		<max-lb type="double">36637.5</max-lb>
+	</weight>	<weight>
+		<name type="string">Belly Pallet 32</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[11]"/>
+		<min-lb type="double">0.0</min-lb>
+		<max-lb type="double">36637.5</max-lb>
+	</weight>	<weight>
+		<name type="string">Belly Pallet 33</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[12]"/>
+		<min-lb type="double">0.0</min-lb>
+		<max-lb type="double">36637.5</max-lb>
+	</weight>	
+</payload>	
+
+
+
+</PropertyList>

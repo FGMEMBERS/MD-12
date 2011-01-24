@@ -1,0 +1,5 @@
+MD-12
+=====
+
+Estimated CG - at 25% mean wing chord -> 3.88218 -0.0274649 0
+

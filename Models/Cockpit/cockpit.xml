@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <path>cabine.ac</path>
+  
+
+<!-- PFD -->
+    <model>
+        <name>PFD1</name>
+        <path>Aircraft/MD-12/Models/Cockpit/Instruments/PFD/PFD.xml</path>
+        <offsets>
+            <x-m>-31.5442</x-m>
+            <y-m>-0.547568</y-m>
+            <z-m>-1.42802</z-m>
+            <pitch-deg>-10</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>PFD2</name>
+        <path>Aircraft/MD-12/Models/Cockpit/Instruments/PFD/PFD.xml</path>
+        <offsets>
+            <x-m>-31.5442</x-m>
+            <y-m>0.547568</y-m>
+            <z-m>-1.42802</z-m>
+            <pitch-deg>-10</pitch-deg>
+        </offsets>
+    </model>
+
+<!-- NAV -->
+    <model>
+        <name>ND1</name>
+        <path>Aircraft/MD-12/Models/Cockpit/Instruments/MFD/ND.xml</path>
+        <offsets>
+            <x-m>-31.5442</x-m>
+            <y-m>-0.346816</y-m>
+            <z-m>-1.42802</z-m>
+            <pitch-deg>-10</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>ND2</name>
+        <path>Aircraft/MD-12/Models/Cockpit/Instruments/MFD/ND.xml</path>
+        <offsets>
+            <x-m>-31.5442</x-m>
+            <y-m> 0.346816</y-m>
+            <z-m>-1.42802</z-m>
+            <pitch-deg>-10</pitch-deg>
+        </offsets>
+    </model>
+    
+<!-- EICAS -->
+    <model>
+        <name>EICAS</name>
+        <path>Aircraft/MD-12/Models/Cockpit/Instruments/EICAS/eicas.xml</path>
+        <offsets>
+            <x-m>-31.5442</x-m>
+            <y-m>-0.146064</y-m>
+            <z-m>-1.42802</z-m>
+            <pitch-deg>-10</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>EICAS</name>
+        <path>Aircraft/MD-12/Models/Cockpit/Instruments/EICAS/eicas.xml</path>
+        <offsets>
+            <x-m>-31.5442</x-m>
+            <y-m>0.146064</y-m>
+            <z-m>-1.42802</z-m>
+            <pitch-deg>-10</pitch-deg>
+        </offsets>
+    </model>
+
+	<!-- AI -->
+  <model>
+    <path>Aircraft/MD-12/Models/Cockpit/Instruments/AI/boeing747-400-ai-jw.xml</path>
+    <offsets>
+      <x-m>-31.5199 </x-m>
+      <y-m>0.064556 </y-m>
+      <z-m>-1.58551 </z-m>
+      <pitch-deg>-10</pitch-deg>
+    </offsets>
+		<animation>
+			<type>noshadow</type>
+		</animation>
+  </model>
+  
+	<!-- ADF -->
+  <model>
+    <path>Aircraft/MD-12/Models/Cockpit/Instruments/ADF/adf.xml</path>
+    <offsets>
+      <x-m>-31.5199 </x-m>
+      <y-m>-0.064556 </y-m>
+      <z-m>-1.58551 </z-m>
+      <pitch-deg>-10</pitch-deg>
+    </offsets>
+		<animation>
+			<type>noshadow</type>
+		</animation>
+  </model>
+    
+<!-- Magnetic Compass -->
+  <model>
+    <path>Aircraft/MD-12/Models/Cockpit/Instruments/MagneticCompass/mag-compass.xml</path>
+    <offsets>
+      <x-m>-31.4228 </x-m>
+      <y-m>-0.0348938 </y-m>
+      <z-m>-0.811512 </z-m>
+      <pitch-deg>-10</pitch-deg>
+    </offsets>
+		<animation>
+			<type>noshadow</type>
+		</animation>
+  </model>
+
+
+<!-- Yokes -->
+   <model>
+      <name>Yokes</name>
+       <path>Aircraft/MD-12/Models/Cockpit/Instruments/Yokes/yokes.xml</path>
+       <offsets>
+         <x-m>-31.3558</x-m>
+          <y-m>0.00</y-m>
+          <z-m>-1.96244</z-m>
+          <pitch-deg>0</pitch-deg>
+       </offsets>
+  </model>
+
+</PropertyList>
+

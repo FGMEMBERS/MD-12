@@ -1,0 +1,740 @@
+<?xml version="1.0"?>
+<PropertyList>
+      <fx>
+            <!-- ##################### -->
+            <!-- ## EXTERIOR ######### -->
+            <!-- ##################### -->
+			
+			<!-- APU -->
+			<APUExternal>
+				  <name>APU External</name>
+                  <mode>looped</mode>
+				  <path>Sounds/extension/APU_External.wav</path>
+				  <condition>
+						<and>
+							  <or>
+									<equals>
+										  <property>/controls/APU/off-start-run</property>
+										  <value>2</value>
+									</equals>
+									<greater-than>
+										  <property>/systems/electrical/suppliers/apu</property>
+										  <value>23.9</value>
+									</greater-than>
+							  </or>
+							  <equals>
+									<property>/sim/crashed</property>
+									<value>false</value>
+							  </equals>
+							  <equals>
+									<property>/sim/current-view/internal</property>
+									<value>false</value>
+							  </equals>
+						</and>
+				  </condition>
+				  <volume>
+						<min>0.0</min>
+						<max>1.0</max>
+				  </volume>
+				  <max-dist>350</max-dist>
+			</APUExternal>
+			
+            <!-- FLAPS -->
+            <flap_ext>
+                  <name>flaps</name>
+                  <mode>in-transit</mode>
+                  <path>Sounds/flaps.wav</path>
+                  <property>/surface-positions/flap-pos-norm</property>
+                  <volume>
+                        <min>0</min>
+                        <max>0.6</max>
+                  </volume>
+                  <max-dist>50</max-dist>
+            </flap_ext>
+			
+			
+            <!-- ##################### -->
+            <!-- ## INTERIOR ######### -->
+            <!-- ##################### -->
+			
+			<!-- APU -->
+			  <APUInternal>
+			   <name>APU Internal</name>
+                  <mode>looped</mode>
+			   <path>Sounds/extension/APU_Internal.wav</path>
+				  <condition>
+						<and>
+							  <or>
+									<equals>
+										  <property>/controls/APU/off-start-run</property>
+										  <value>2</value>
+									</equals>
+									<greater-than>
+										  <property>/systems/electrical/suppliers/apu</property>
+										  <value>23.9</value>
+									</greater-than>
+							  </or>
+							  <equals>
+									<property>/sim/crashed</property>
+									<value>false</value>
+							  </equals>
+							  <equals>
+									<property>/sim/current-view/internal</property>
+									<value>true</value>
+							  </equals>
+						</and>
+				  </condition>
+			   <volume>
+						<min>0.0</min>
+						<max>0.5</max>
+			   </volume>
+			  </APUInternal>			
+			
+			  <!-- Ligando a turbina -->
+			  <engineTS1>
+			   <name>Engine 1 startup</name>
+			   <path>Sounds/extension/EngStart.wav</path>
+			   <condition>
+                                    <and>
+                                          <equals>
+                                                <property>/controls/engines/engine[0]/starter</property>
+                                                <value>true</value>
+                                          </equals>
+                                          <equals>
+                                                <property>/controls/engines/engine[0]/cutoff</property>
+                                                <value>false</value>
+                                          </equals>
+                                    </and>
+			   </condition>
+			   <volume>
+						<min>0.0</min>
+						<max>1.0</max>
+			   </volume>
+			  </engineTS1>
+
+			  <engineTS2>
+			   <name>Engine 2 startup</name>
+			   <path>Sounds/extension/EngStart.wav</path>
+			   <condition>
+                                    <and>
+                                          <equals>
+                                                <property>/controls/engines/engine[1]/starter</property>
+                                                <value>true</value>
+                                          </equals>
+                                          <equals>
+                                                <property>/controls/engines/engine[1]/cutoff</property>
+                                                <value>false</value>
+                                          </equals>
+                                    </and>
+			   </condition>
+			   <volume>
+						<min>0.0</min>
+						<max>1.0</max>
+			   </volume>
+			  </engineTS2>
+
+			  <engineTS3>
+			   <name>Engine 3 startup</name>
+			   <path>Sounds/extension/EngStart.wav</path>
+			   <condition>
+                                    <and>
+                                          <equals>
+                                                <property>/controls/engines/engine[2]/starter</property>
+                                                <value>true</value>
+                                          </equals>
+                                          <equals>
+                                                <property>/controls/engines/engine[2]/cutoff</property>
+                                                <value>false</value>
+                                          </equals>
+                                    </and>
+			   </condition>
+			   <volume>
+						<min>0.0</min>
+						<max>1.0</max>
+			   </volume>
+			  </engineTS3>
+
+			  <engineTS4>
+			   <name>Engine 4 startup</name>
+			   <path>Sounds/extension/EngStart.wav</path>
+			   <condition>
+                                    <and>
+                                          <equals>
+                                                <property>/controls/engines/engine[3]/starter</property>
+                                                <value>true</value>
+                                          </equals>
+                                          <equals>
+                                                <property>/controls/engines/engine[3]/cutoff</property>
+                                                <value>false</value>
+                                          </equals>
+                                    </and>
+			   </condition>
+			   <volume>
+						<min>0.0</min>
+						<max>1.0</max>
+			   </volume>
+			  </engineTS4>
+			  
+			  <!-- Desligando a turbina -->
+			  <engineTSd1>
+			   <name>Engine 1 shutdown</name>
+			   <path>Sounds/extension/Engshut.wav</path>
+			   <condition>
+                                    <and>
+											<lower-than>
+                                                <property>/engines/engine[0]/n1</property>
+                                                <value>29.9</value>
+											</lower-than>
+                                          <equals>
+                                                <property>/controls/engines/engine[0]/starter</property>
+                                                <value>false</value>
+                                          </equals>
+                                          <equals>
+                                                <property>/controls/engines/engine[0]/cutoff</property>
+                                                <value>true</value>
+                                          </equals>
+                                    </and>
+			   </condition>
+			   <volume>
+						<min>0.0</min>
+						<max>1.0</max>
+			   </volume>
+			  </engineTSd1>
+
+			  <engineTSd2>
+			   <name>Engine 2 shutdown</name>
+			   <path>Sounds/extension/Engshut.wav</path>
+			   <condition>
+                                    <and>
+											<lower-than>
+                                                <property>/engines/engine[1]/n1</property>
+                                                <value>29.9</value>
+											</lower-than>
+											<equals>
+                                                <property>/controls/engines/engine[1]/starter</property>
+                                                <value>false</value>
+                                          </equals>
+                                          <equals>
+                                                <property>/controls/engines/engine[1]/cutoff</property>
+                                                <value>true</value>
+                                          </equals>
+                                    </and>
+			   </condition>
+			   <volume>
+						<min>0.0</min>
+						<max>1.0</max>
+			   </volume>
+			  </engineTSd2>
+
+			  <engineTSd3>
+			   <name>Engine 3 shutdown</name>
+			   <path>Sounds/extension/Engshut.wav</path>
+			   <condition>
+                                    <and>
+											<lower-than>
+                                                <property>/engines/engine[2]/n1</property>
+                                                <value>29.9</value>
+											</lower-than>
+											<equals>
+                                                <property>/controls/engines/engine[2]/starter</property>
+                                                <value>false</value>
+                                          </equals>
+                                          <equals>
+                                                <property>/controls/engines/engine[2]/cutoff</property>
+                                                <value>true</value>
+                                          </equals>
+                                    </and>
+			   </condition>
+			   <volume>
+						<min>0.0</min>
+						<max>1.0</max>
+			   </volume>
+			  </engineTSd3>
+
+			  <engineTSd4>
+			   <name>Engine 4 shutdown</name>
+			   <path>Sounds/extension/Engshut.wav</path>
+			   <condition>
+                                    <and>
+											<lower-than>
+                                                <property>/engines/engine[3]/n1</property>
+                                                <value>29.9</value>
+											</lower-than>
+											<equals>
+                                                <property>/controls/engines/engine[3]/starter</property>
+                                                <value>false</value>
+                                          </equals>
+                                          <equals>
+                                                <property>/controls/engines/engine[3]/cutoff</property>
+                                                <value>true</value>
+                                          </equals>
+                                    </and>
+			   </condition>
+			   <volume>
+						<min>0.0</min>
+						<max>1.0</max>
+			   </volume>
+			  </engineTSd4>
+
+		<!-- Reversores -->
+			<!-- Reversores Disparados -->
+            <engineRStar1>
+                  <name>Engine 1 Reverse Started</name>
+                  <path>Sounds/exhaust_start.wav</path>
+                  <mode>looped</mode>
+                  <condition>
+                        <and>
+                                          <greater-than>
+                              <property>/engines/engine/reverser-pos-norm</property>
+                                                <value>0</value>
+                                          </greater-than>
+                                          <equals>
+                              <property>engines/engine[0]/running</property>
+                                                <value>true</value>
+                                          </equals>							  
+                        </and>
+                  </condition>
+                  <volume>
+                        <property>/engines/engine[0]/thrust_lb</property>
+                        <type>ln</type>
+                        <factor>0.0050</factor>
+                        <offset>0.05</offset>
+                  </volume>
+                  <pitch>
+                        <offset>1.0</offset>
+                  </pitch>
+            </engineRStar1>
+			
+			<!-- Reversores Em curso -->
+			<!--
+            <engineRRun1>
+                  <name>Engine 1 Reverse Started</name>
+                  <path>Sounds/exhaust_loop.wav</path>
+                  <mode>looped</mode>
+                  <condition>
+                        <or>
+                              <property>/engines/engine/reverser-pos-norm</property>
+                        </or>
+                        <and>
+                              <property>engines/engine[0]/running</property>
+                        </and>
+                  </condition>
+                  <volume>
+                        <property>/engines/engine[0]/thrust_lb</property>
+                        <type>ln</type>
+                        <factor>0.0050</factor>
+                        <offset>0.05</offset>
+                  </volume>
+                  <pitch>
+                        <offset>1.6</offset>
+                  </pitch>
+            </engineRRun1>
+				-->
+				
+			<!-- Reversores Fechados -->
+				
+				
+			
+            <!-- TURBINA -->
+            <engineI1>
+                  <name>Engine 1</name>
+                  <path>Sounds/jet.wav</path>
+                  <mode>looped</mode>
+                  <condition>
+                        <and>
+                              <not>
+                                    <and>
+                                          <equals>
+                                                <property>/controls/engines/engine[0]/starter</property>
+                                                <value>true</value>
+                                          </equals>
+                                          <equals>
+                                                <property>/controls/engines/engine[0]/cutoff</property>
+                                                <value>true</value>
+                                          </equals>
+                                    </and>
+                              </not>
+                              <greater-than>
+                                    <property>/engines/engine[0]/n1</property>
+                                    <value>5</value>
+                              </greater-than>
+                              <equals>
+                                    <property>/sim/current-view/internal</property>
+                                    <value>true</value>
+                              </equals>
+                        </and>
+                  </condition>
+                  <volume>
+                        <property>/engines/engine[0]/n1[0]</property>
+                        <type>ln</type>
+                        <factor>0.1171472</factor>
+                        <offset>0.05</offset>
+                        <min>0.0</min>
+                        <max>1.0</max>
+                  </volume>
+                  <pitch>
+                        <property>/engines/engine[0]/n1[0]</property>
+                        <type>log</type>
+                        <factor>0.5</factor>
+                        <offset>0.10</offset>
+                  </pitch>
+            </engineI1>
+			
+            <engineI2>
+                  <name>Engine 2</name>
+                  <path>Sounds/jet.wav</path>
+                  <mode>looped</mode>
+                  <condition>
+                        <and>
+                              <not>
+                                    <and>
+                                          <equals>
+                                                <property>/controls/engines/engine[1]/starter</property>
+                                                <value>true</value>
+                                          </equals>
+                                          <equals>
+                                                <property>/controls/engines/engine[1]/cutoff</property>
+                                                <value>true</value>
+                                          </equals>
+                                    </and>
+                              </not>
+                              <greater-than>
+                                    <property>/engines/engine[1]/n1</property>
+                                    <value>5</value>
+                              </greater-than>
+                              <equals>
+                                    <property>/sim/current-view/internal</property>
+                                    <value>true</value>
+                              </equals>
+                        </and>
+                  </condition>
+                  <volume>
+                        <property>/engines/engine[1]/n1[0]</property>
+                        <type>ln</type>
+                        <factor>0.1171472</factor>
+                        <offset>0.05</offset>
+                        <min>0.0</min>
+                        <max>1.0</max>
+                  </volume>
+                  <pitch>
+                        <property>/engines/engine[1]/n1[0]</property>
+                        <type>log</type>
+                        <factor>0.5</factor>
+                        <offset>0.10</offset>
+                  </pitch>
+            </engineI2>
+			
+            <engineI3>
+                  <name>Engine 3</name>
+                  <path>Sounds/jet.wav</path>
+                  <mode>looped</mode>
+                  <condition>
+                        <and>
+                              <not>
+                                    <and>
+                                          <equals>
+                                                <property>/controls/engines/engine[2]/starter</property>
+                                                <value>true</value>
+                                          </equals>
+                                          <equals>
+                                                <property>/controls/engines/engine[2]/cutoff</property>
+                                                <value>true</value>
+                                          </equals>
+                                    </and>
+                              </not>
+                              <greater-than>
+                                    <property>/engines/engine[2]/n1</property>
+                                    <value>5</value>
+                              </greater-than>
+                              <equals>
+                                    <property>/sim/current-view/internal</property>
+                                    <value>true</value>
+                              </equals>
+                        </and>
+                  </condition>
+                  <volume>
+                        <property>/engines/engine[2]/n1[0]</property>
+                        <type>ln</type>
+                        <factor>0.1171472</factor>
+                        <offset>0.05</offset>
+                        <min>0.0</min>
+                        <max>1.0</max>
+                  </volume>
+                  <pitch>
+                        <property>/engines/engine[2]/n1[0]</property>
+                        <type>log</type>
+                        <factor>0.5</factor>
+                        <offset>0.10</offset>
+                  </pitch>
+            </engineI3>
+			
+            <engineI4>
+                  <name>Engine 4</name>
+                  <path>Sounds/jet.wav</path>
+                  <mode>looped</mode>
+                  <condition>
+                        <and>
+                              <not>
+                                    <and>
+                                          <equals>
+                                                <property>/controls/engines/engine[3]/starter</property>
+                                                <value>true</value>
+                                          </equals>
+                                          <equals>
+                                                <property>/controls/engines/engine[3]/cutoff</property>
+                                                <value>true</value>
+                                          </equals>
+                                    </and>
+                              </not>
+                              <greater-than>
+                                    <property>/engines/engine[3]/n1</property>
+                                    <value>5</value>
+                              </greater-than>
+                              <equals>
+                                    <property>/sim/current-view/internal</property>
+                                    <value>true</value>
+                              </equals>
+                        </and>
+                  </condition>
+                  <volume>
+                        <property>/engines/engine[3]/n1[0]</property>
+                        <type>ln</type>
+                        <factor>0.1171472</factor>
+                        <offset>0.05</offset>
+                        <min>0.0</min>
+                        <max>1.0</max>
+                  </volume>
+                  <pitch>
+                        <property>/engines/engine[3]/n1[0]</property>
+                        <type>log</type>
+                        <factor>0.5</factor>
+                        <offset>0.10</offset>
+                  </pitch>
+            </engineI4>
+			
+			<!-- Turbina Ruido Interno -->
+            <engineIW>
+                  <name>Engines Whine</name>
+                  <path>Sounds/whine.wav</path>
+                  <mode>looped</mode>
+                  <condition>
+                        <and>
+                                          <equals>
+                                                <property>/controls/engines/engine[0]/cutoff</property>
+                                                <value>false</value>
+                                          </equals>
+                              <greater-than>
+                                    <property>/engines/engine[0]/n1</property>
+                                    <value>20</value>
+                              </greater-than>
+                              <equals>
+                                    <property>/sim/current-view/internal</property>
+                                    <value>true</value>
+                              </equals>
+                        </and>
+                  </condition>
+                  <volume>
+                        <property>/engines/engine[0]/n1[0]</property>
+                        <type>ln</type>
+                        <factor>0.1171472</factor>
+                        <offset>0.05</offset>
+                        <min>0.0</min>
+                        <max>1.0</max>
+                  </volume>
+                  <pitch>
+                        <property>/engines/engine[0]/n1[0]</property>
+                        <type>log</type>
+                        <factor>0.5</factor>
+                        <offset>0.10</offset>
+                  </pitch>
+            </engineIW>
+
+			
+            <!-- FLAPS -->
+            <flap_ext>
+                  <name>flaps</name>
+                  <mode>in-transit</mode>
+                  <path>Sounds/flaps.wav</path>
+                  <property>/surface-positions/flap-pos-norm</property>
+                  <volume>
+                        <min>0</min>
+                        <max>0.45</max>
+                  </volume>
+            </flap_ext>
+			
+            <!-- Rolagem no solo e batinada interna -->
+            <rumble>
+                  <name>rumble</name>
+                  <mode>looped</mode>
+                  <path>Sounds/extension/roll.wav</path>
+                  <condition>
+                        <and>
+                              <or>
+                                    <property>/gear/gear[0]/wow</property>
+                                    <property>/gear/gear[1]/wow</property>
+                                    <property>/gear/gear[2]/wow</property>
+                              </or>
+                              <equals>
+                                    <property>/sim/current-view/internal</property>
+                                    <value>true</value>
+                              </equals>
+                        </and>
+                  </condition>
+                  <volume>
+                        <property>/velocities/airspeed-kt</property>
+                        <type>log</type>
+                        <factor>0.5</factor>
+                        <min>0</min>
+                        <max>1.0</max>
+                  </volume>
+            </rumble>
+            <squeal>
+                  <name>squeal</name>
+                  <path>Sounds/squeal.wav</path>
+                  <condition>
+                        <or>
+                              <property>/gear/gear[0]/wow</property>
+                              <property>/gear/gear[1]/wow</property>
+                              <property>/gear/gear[2]/wow</property>
+                        </or>
+                  </condition>
+                  <volume>
+                        <property>/velocities/speed-down-fps</property>
+                        <factor>0.05</factor>
+                        <min>0</min>
+                        <max>1.0</max>
+                  </volume>
+                  <volume>
+                        <property>/velocities/airspeed-kt</property>
+                        <factor>0.01</factor>
+                        <min>0</min>
+                        <max>1.0</max>
+                  </volume>
+                  <volume>
+                        <internal>dt_stop</internal>
+                        <factor>0.05</factor>
+                        <min>0</min>
+                        <max>1.0</max>
+                  </volume>
+                  <pitch>
+                        <property>/velocities/airspeed-kt</property>
+                        <factor>0.0025</factor>
+                        <offset>1.2</offset>
+                  </pitch>
+            </squeal>
+			
+            <!-- ##################### -->
+            <!-- ## CONTROLES ######## -->
+            <!-- ##################### -->
+            <FastenSeatbelt>
+                  <name>FastenSeatbelt</name>
+                  <mode>once</mode>
+                  <path>Sounds/extension/FastenSeatbelt.wav</path>
+                  <condition>
+                        <property>controls/switches/seatbelt-sign</property>
+                  </condition>
+            </FastenSeatbelt>
+			
+            <!-- ##################### -->
+            <!-- ## ALARMES ########## -->
+            <!-- ##################### -->
+			
+            <!-- Aviso de stall -->
+            <stall>
+                  <name>stall</name>
+                  <path>Sounds/extension/stall.wav</path>
+                  <property>/sim/alarms/stall-warning</property>
+            </stall>
+			
+            <!-- Cliquedoscontroles -->
+            <switch>
+                  <name>clickonoff</name>
+                  <mode>once</mode>
+                  <path>Sounds/click.wav</path>
+                  <condition>
+                        <not>
+                              <property>/sim/sound/switch</property>
+                        </not>
+                  </condition>
+                  <max-dist>2.0</max-dist>
+            </switch>
+			
+            <!-- ##################### -->
+            <!-- ## AMBIENTE ######### -->
+            <!-- ##################### -->
+			
+            <!-- VENTO -->
+            <wind>
+                  <name>wind</name>
+                  <mode>looped</mode>
+                  <path>Sounds/wind.wav</path>
+                  <property>/velocities/airspeed-kt</property>
+                  <volume>
+                        <property>/position/altitude-ft</property>
+                        <factor>-0.000015</factor>
+                        <offset>1.0</offset>
+                        <min>0.1</min>
+                        <max>1.0</max>
+                  </volume>
+                  <volume>
+                        <property>/velocities/airspeed-kt</property>
+                        <factor>0.0015</factor>
+                        <min>0.03</min>
+                        <max>0.25</max>
+                  </volume>
+                  <pitch>
+                        <property>/velocities/airspeed-kt</property>
+                        <factor>0.01</factor>
+                        <offset>1.25</offset>
+                  </pitch>
+            </wind>
+			
+            <!-- Crash -->
+            <crash>
+                  <name>Crash</name>
+                  <path>Sounds/crash.wav</path>
+                  <condition>
+                        <equals>
+                              <property>/sim/crashed</property>
+                              <value>true</value>
+                        </equals>
+                  </condition>
+            </crash>
+			
+            <!-- Chuva -->
+            <rain>
+                  <name>rain</name>
+                  <mode>looped</mode>
+                  <path>Sounds/rain.wav</path>
+                  <condition>
+                        <and>
+                              <equals>
+                                    <property>environment/rain/above_clouds</property>
+                                    <value>0</value>
+                              </equals>
+                              <or>
+                                    <greater-than>
+                                          <property>environment/metar/rain-norm</property>
+                                          <value>0.2</value>
+                                    </greater-than>
+                                    <greater-than>
+                                          <property>environment/metar/snow-norm</property>
+                                          <value>0.2</value>
+                                    </greater-than>
+                              </or>
+                        </and>
+                  </condition>
+                  <volume>
+                        <property>/environment/metar/rain-norm</property>
+                        <factor>1.00</factor>
+                        <min>0.4</min>
+                        <max>1.0</max>
+                  </volume>
+                  <pitch>
+                        <property>/velocities/airspeed-kt</property>
+                        <factor>0.001</factor>
+                        <offset>1.0</offset>
+                  </pitch>
+            </rain>
+      </fx>
+</PropertyList>
