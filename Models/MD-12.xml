@@ -1,3 +1,5 @@
+<?xml version="1.0"?>
+
 <PropertyList>
 
  <!-- Define o modelo 3d da aeronave -->
@@ -192,7 +194,7 @@
 <!-- ## Luzes ## -->
 <!-- ########### -->
 
-<!-- Navegação fuselagem porta traseira -->
+<!-- NavegaÃ§Ã£o fuselagem porta traseira -->
 <model>
 	<path>Aircraft/MD-12/Models/Lights/beacon.xml</path>
 	<offsets>
